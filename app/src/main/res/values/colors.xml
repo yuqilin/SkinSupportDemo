@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary_red">#F44336</color>
+    <color name="colorPrimary_pink">#E91E63</color>
+    <color name="colorPrimary_purple">#9C27B0</color>
+    <color name="colorPrimary_deep_purple">#673AB7</color>
+    <color name="colorPrimary_green">#4CAF50</color>
+
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDark_red">#F44336</color>
+    <color name="colorPrimaryDark_pink">#E91E63</color>
+    <color name="colorPrimaryDark_purple">#9C27B0</color>
+    <color name="colorPrimaryDark_deep_purple">#673AB7</color>
+    <color name="colorPrimaryDark_green">#4CAF50</color>
+
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="primary_material_dark_red">#F44336</color>
+    <color name="primary_material_dark_pink">#E91E63</color>
+    <color name="primary_material_dark_purple">#9C27B0</color>
+    <color name="primary_material_dark_deep_purple">#673AB7</color>
+    <color name="primary_material_dark_green">#4CAF50</color>
+
+    <color name="text_color">#000000</color>
+    <color name="text_color_red">#F44336</color>
+    <color name="text_color_pink">#E91E63</color>
+    <color name="text_color_purple">#9C27B0</color>
+    <color name="text_color_deep_purple">#673AB7</color>
+    <color name="text_color_green">#4CAF50</color>
+
+    <color name="md_red_500">#F44336</color>
+    <color name="md_pink_500">#E91E63</color>
+    <color name="md_purple_500">#9C27B0</color>
+    <color name="md_deep_purple_500">#673AB7</color>
+    <color name="md_indigo_500">#3F51B5</color>
+    <color name="md_green_500">#4CAF50</color>
+</resources>

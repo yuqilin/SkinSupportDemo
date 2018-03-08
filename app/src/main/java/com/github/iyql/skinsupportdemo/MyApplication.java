@@ -3,8 +3,7 @@ package com.github.iyql.skinsupportdemo;
 import android.app.Application;
 
 import skin.support.SkinCompatManager;
-//import skin.support.constraint.app.SkinConstraintViewInflater;
-//import skin.support.design.app.SkinMaterialViewInflater;
+import skin.support.design.app.SkinMaterialViewInflater;
 
 /**
  * Created by yuqilin on 2018/3/7.
@@ -17,7 +16,7 @@ public class MyApplication extends Application {
         super.onCreate();
         SkinCompatManager.withoutActivity(this)
 //                .addStrategy(new CustomSDCardLoader())          // 自定义加载策略，指定SDCard路径
-//                .addInflater(new SkinMaterialViewInflater())    // material design
+                .addInflater(new SkinMaterialViewInflater())    // material design
 //                .addInflater(new SkinConstraintViewInflater())  // ConstraintLayout
 //                .addInflater(new SkinCardViewInflater())        // CardView v7
 //                .addInflater(new SkinCircleImageViewInflater()) // hdodenhof/CircleImageView

@@ -1,15 +1,18 @@
 package com.github.iyql.skinsupportdemo;
 
 import android.graphics.drawable.ColorDrawable;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import skin.support.SkinCompatManager;
 import skin.support.content.res.SkinCompatResources;
 import skin.support.widget.SkinCompatSupportable;
 
-public class MainActivity extends AppCompatActivity implements SkinCompatSupportable {
+public class MainActivity extends AppCompatActivity {
 
     String[] themeColors = {
             "red", "pink", "purple", "deep_purple", "green"
@@ -22,7 +25,19 @@ public class MainActivity extends AppCompatActivity implements SkinCompatSupport
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.change_theme).setOnClickListener(new View.OnClickListener() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
+        findViewById(R.id.change_theme_color).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SkinCompatManager.getInstance().loadSkin(themeColors[clicked++ % themeColors.length], null, SkinCompatManager.SKIN_LOADER_STRATEGY_BUILD_IN);
@@ -30,8 +45,8 @@ public class MainActivity extends AppCompatActivity implements SkinCompatSupport
         });
     }
 
-    @Override
-    public void applySkin() {
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(SkinCompatResources.getColor(MainActivity.this, R.color.colorPrimary)));
-    }
+//    @Override
+//    public void applySkin() {
+//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(SkinCompatResources.getColor(MainActivity.this, R.color.colorPrimary)));
+//    }
 }

@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.github.iyql.colorful.ColorPickerDialog;
+import com.github.iyql.colorful.Colorful;
+
 import skin.support.SkinCompatManager;
 import skin.support.content.res.SkinCompatResources;
 import skin.support.widget.SkinCompatSupportable;
@@ -40,7 +43,15 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.change_theme_color).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SkinCompatManager.getInstance().loadSkin(themeColors[clicked++ % themeColors.length], null, SkinCompatManager.SKIN_LOADER_STRATEGY_BUILD_IN);
+//                SkinCompatManager.getInstance().loadSkin(themeColors[clicked++ % themeColors.length], null, SkinCompatManager.SKIN_LOADER_STRATEGY_BUILD_IN);
+                ColorPickerDialog colorPickerDialog = new ColorPickerDialog();
+                colorPickerDialog.setOnColorSelectedListener(new ColorPickerDialog.OnColorSelectedListener() {
+                    @Override
+                    public void onColorSelected(Colorful.ThemeColor color) {
+                        SkinCompatManager.getInstance().loadSkin(color.getThemeName(), null, SkinCompatManager.SKIN_LOADER_STRATEGY_BUILD_IN);
+                    }
+                });
+                colorPickerDialog.show(getSupportFragmentManager(), "colorPicker");
             }
         });
     }

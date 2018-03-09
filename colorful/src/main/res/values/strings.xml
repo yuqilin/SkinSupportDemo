@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">colorful</string>
+    <string name="picker_title">Choose Your Color</string>
 </resources>

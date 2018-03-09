@@ -21,15 +21,15 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibraryVersion}"
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    implementation project(':skin-support')
-
     implementation "com.android.support:design:${rootProject.ext.supportLibraryVersion}"
-    implementation project(':skin-support-design')
-
-    implementation project(':skin-support-constraint-layout')
-    implementation project(':skin-support-cardview')
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile project(':skin-support')
+    compile project(':skin-support-design')
+    compile project(':skin-support-cardview')
+    compile project(':skin-support-constraint-layout')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    compile project(path: ':colorful')
 }
